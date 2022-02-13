@@ -4,9 +4,9 @@
 
 def sum arr
   # YOUR CODE HERE
-  ret = 0
-  arr.each{|x| ret+=x}
-  return ret
+  ret = 0 # Sum to be returned
+  arr.each{|x| ret+=x} # Iterate over arr and add elements to ret
+  return ret # Return sum
 end
 
 def max_2_sum arr
@@ -30,7 +30,7 @@ end
 
 def hello(name)
   # YOUR CODE HERE
-  return "Hello, #{name}"
+  return "Hello, #{name}" # Return concatenated string
 end
 
 def starts_with_consonant? s
@@ -40,7 +40,7 @@ end
 
 def binary_multiple_of_4? s
   # YOUR CODE HERE
-  return s.match(/^[01]+$/) ? s.to_i(2)%4 == 0 : false # REGEX Match if valid binary and check if divisble by 4
+  return s.match(/^[01]+$/) ? (s.to_i(2)%4 == 0) : false # REGEX Match if valid binary and also check if divisble by 4
 end
 
 # Part 3
@@ -49,8 +49,8 @@ class BookInStock
   # YOUR CODE HERE
   attr_accessor :isbn, :price
   def initialize(isbn, price)
-    raise ArgumentError.new("ISBN Invalid") if isbn.length()==0 
-    raise ArgumentError.new("Price Invalid") if price<=0
+    raise ArgumentError.new("ISBN Invalid") if isbn.length()==0 # ISBN length should be greater than zero
+    raise ArgumentError.new("Price Invalid") if price<=0 # Price should be greater than zero
     @isbn = isbn
     @price = price
   end
